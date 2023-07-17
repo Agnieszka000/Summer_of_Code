@@ -1,0 +1,81 @@
+<!doctype html>
+<title>RetroFix</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  * {
+   box-sizing: border-box; 
+  }
+  /*body {
+    margin: 0;
+  }*/
+
+  #main {
+    display: flex;
+    min-height: calc(100vh - 40vh);
+  }
+  #main > article {
+    flex: 1;
+}
+  #main > nav, 
+  #main > aside {
+    flex: 0 0 20vw;
+    background: #ff85a1;
+  }
+  #main > nav {
+    order: -1;
+  }
+  header, footer, article, nav, aside {
+    padding: 1em;
+  }
+  header, footer {
+    background: #CC7178;
+    height: 20vh;
+  }
+</style>
+
+<body>
+  
+  <header id="mainHeader">
+  	<h1>Rewrite your <em>past</em>!</h1>
+  </header>
+  
+ 	 <div id="main">
+    	<article id="mainParagraph">
+        <span id="textHeader"><span id="colorBrighter">BRIGHTER</span> PAST FOR <span id="colorBetter">BETTER FUTURE!</span></span> <br>
+    		<p><br>We're RetroFix, top specialists in rewriting personal histories. Say goodbye to unwanted memories that hold you back. Our unique techniques will give you a fresh start. Let us help you rewrite your story and embrace a life free from the weight of the past.</p>
+    <br>
+    <br>
+   <div id="images">
+    	<img id="jeden" src="dancing_woman.jpg" width="20%">
+    	<img id="dwa" src="two_women.jpg" width="20%">
+    	<img id="trzy" src="woman_in_red.jpg" width="20%">
+      <img id="trzy" src="woman2.jpg" width="20%">
+   
+   </div>
+  </article>
+  
+  <nav id="mainNav">
+    <span id="navMenu">
+      <ul><li>Menu</li></ul>
+    </span>
+    <ol>
+      <li>Home Page</li>
+      <li>About us</li>
+      <li>Testimonies</li>
+      <li>Contact us</li>
+    </ol></nav>
+    
+  <aside id="mainAside">
+    <div id="asideImage"><br><br><img src="wepik-export-202307161253320i3w.png" alt="heart" width="35%">
+    </div>
+    <ul>
+      <li>facebook</li>
+      <li>instagram</li>
+      <li>twitter</li>
+      <li>mastodon</li>
+    </ul>
+  </aside>
+  </div>
+  
+  <footer id="mainFooter"><br><br>Copyright&COPY;#SummerOfCode2023<br> heart: Freepik</footer>
+</body>
