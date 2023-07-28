@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup # Importuje BeautifulSoup.
 import requests # Importuje biblioteke "requests".
 
-with open('/home/kali/Desktop/summer_of_code/W4_D2_Web_scraping/simple.html') as html_file: # Odczytuje plik jdo zmiennej html_file.
+with open('simple.html') as html_file: # Odczytuje plik jdo zmiennej html_file.
     soup = BeautifulSoup(html_file, 'lxml') # Przesylam plik do BeautifulSoup zmiennej "soup". Uzywam "lxml" jako parsera.
 # print(soup.prettify()) # Drukuje sformatowana wersje "soup".
 
