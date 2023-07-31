@@ -1,8 +1,7 @@
 # Celem tego projektu jest stworzenie web scrapera, który będzie wyciągał informacje o nadchodzących wydarzeniach IT z meetup.com w Twoim mieście (lub jeśli w Twoim mieście nic się nie dzieje to np. Warszawie).
-
 #Jeśli strona meetup.com przerośnie Cię stopniem skomplikowania spróbuj z ciut prostrzą stroną jaką jest crossweb.pl
-#Kroki do wykonania:
 
+#Kroki do wykonania:
 #   Zbadaj strukturę strony: Użyj narzędzi deweloperskich swojej przeglądarki, aby zbadać strukturę HTML strony Meetup.com. Zidentyfikuj tagi, które zawierają informacje o wydarzeniach IT.
 #    Napisz scraper: Używając BeautifulSoup i Requests (lub korzystając z alternatywnych narzędzi jak Requests-HTML), napisz scraper, który będzie w stanie odwiedzić stronę, wyodrębnić potrzebne informacje i zapisać je w strukturze danych Pythona, takiej jak lista słowników. Informacje, które chcesz wyodrębnić, mogą obejmować nazwę wydarzenia, datę, czas, miejsce i opis.
 #    (opcjonalnie - dla średniozaawansowanych) Dodaj obsługę błędów i debugowanie: Dodaj do swojego scrapera obsługę błędów, aby nie zawieszał się, gdy napotka nieoczekiwane dane.
@@ -26,20 +25,16 @@ events = soup.find('div', id='container') # Bez .text poniewaz potrzebuje cala z
 
 event_name = events.find_all('div', class_='tab-row fw-regular fs-standard fc-black-light') # Znajduje cala zawartosc dic=v class wraz z tagami.
 
-#event_name1 = events.find_all('div', class_='tab-row fw-regular fs-standard fc-black-light')[0].get_text() # Znajduje i drukuje tekst tylko 1 elementu (o indeksie 0)..
+#event_name1 = events.find_all('div', class_='tab-row fw-regular fs-standard fc-black-light')[0].get_text() # Znajduje i drukuje tekst tylko 1 elementu (o indeksie 0).
 #print(event_name1)
 
-#!!!!!!!!!!!!!!!PROBLEM Z ZAPISYWANIEM NA LISTE
 event_number = 0
 for event in event_name:
     event = events.find_all('div', class_='tab-row fw-regular fs-standard fc-black-light')[event_number].get_text()
     event = event.replace(' ' , '')
-    with open('/home/kali/Desktop/summer_of_code/W4_D5_Web_scraping/list.txt', 'a') as f: # Uzywam append mode (a), zeby program dodawal do pliku kazda info a nie zastepowal je jak w write mode (w).
+    with open('list.txt', 'a') as f: # Uzywam append mode (a), zeby program dodawal do pliku kazda info a nie zastepowal je jak w write mode (w).
       f.write(event)
     event_number += 1
     time.sleep(5)
 
-
-# time.sleep()
 # TERAZ TRZEBA OCZYSCIC TEKST Z BLANK LINES ORAZ WYRZUCIC NIEPOTRZEBNE TAGI.
-# Zapisac dane do pliku CVS
