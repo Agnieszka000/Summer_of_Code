@@ -1,0 +1,24 @@
+Zadanie 1
+
+☑  A) Wykonaj zapytanie GET do JSONPlaceholder API.
+
+    curl https://jsonplaceholder.typicode.com/todos
+    lub
+    curl https://jsonplaceholder.typicode.com/posts
+
+    
+☑ B) Zapoznaj się z dokumentacją i pobierz wszystkich użytkowników.
+
+    https://jsonplaceholder.typicode.com/guide/
+
+    curl https://jsonplaceholder.typicode.com/users
+
+☑ C) Wykonaj zapytanie POST do API udostępniającego funkcjonalność tworzenia rekordu. 
+
+    curl -X POST https://jsonplaceholder.typicode.com/users \
+    -H 'Content-Type: application/json' \
+    -d '{"id": 11, "name":"Angela Moriarty","email":"angela.mo@gmail.com"}'
+
+☑  D) Spróbuj wykonać żądanie PUT, aby zaktualizować istniejący zasób, użyj JSONPlaceholder API posts/1 .
+
+    curl -X PUT https://jsonplaceholder.typicode.com/posts/1 -d '{"title" : "Cos tu sie nie zagadza."}'
