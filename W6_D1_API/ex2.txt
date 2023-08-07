@@ -1,0 +1,14 @@
+☑ A) Zapoznaj się z dokumentacją OpenWeatherMap API (zwróć uwagę, że  musisz utworzyć darmowe konto, aby uzyskać swój klucz do API, później  przekazywany w parametrze jako &appid={API key}).
+
+    https://openweathermap.org/api
+	https://openweathermap.org/current
+
+☑ B) Wykonaj zapytanie GET do pogodowego API, aby pobrać dane dotyczące aktualnej prognozy pogody dla wybranego miasta (np. Poznań, Madryt, Londyn).
+
+    curl 'http://api.openweathermap.org/geo/1.0/direct?q=Gdansk&appid={API key}
+    curl 'https://api.openweathermap.org/data/2.5/weather?lat=54.37&lon=18.61&appid={API key}'
+
+☑ C) Wykonaj zapytanie GET, które zwróci prognozę pogody 5-dniową dla Warszawy.
+
+    curl 'http://api.openweathermap.org/geo/1.0/direct?q=Warszawa&appid={API key}'
+    curl 'api.openweathermap.org/data/2.5/forecast?lat=52.23&lon=21.00&appid={API key}'
