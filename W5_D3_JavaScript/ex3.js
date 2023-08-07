@@ -3,8 +3,7 @@
 Gdy program działa, rozszerz go np. o podawanie informacji za którym razem udało się zgadnąć lub o wskazówki typu 
 ”Podana przez ciebie liczba jest większa/mniejsza od wylosowanej”*/
 
-
-let number = parseInt(Math.random()*10);
+let number = parseInt(Math.round(Math.random() * 10)); //Math.round zaokragla float do najblizszej pelnej liczby.
 let userNumber = parseInt(prompt("Wylosowalam liczbe. Zgadnij ja. Podaj od 0 do 10:"));
 
 function inf() {
